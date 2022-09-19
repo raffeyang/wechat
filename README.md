@@ -2,6 +2,8 @@
 
 A wechat extension to quickly search your contacts and chat
 
+![wechat](./assets/showcase.png)
+
 ## Requirement
 
 Install [WeChatTweak-macOS](https://github.com/Sunnyyoung/WeChatTweak-macOS) first
@@ -17,6 +19,8 @@ Install [WeChatTweak-macOS](https://github.com/Sunnyyoung/WeChatTweak-macOS) fir
 - [x] List Wechat ID
 - [x] Copy Wechat ID
 - [x] Display Avatar
+- [ ] Fix bug
+- [ ] Upload to Raycast Store
 
 ## Known Issue
 
