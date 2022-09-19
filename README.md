@@ -1,6 +1,6 @@
 # Wechat
 
-A wechat extension to quickly search your contacts and chat
+A RayCast extension for WeChat to quickly search your contacts and chat
 
 ![wechat](./assets/showcase.png)
 
