@@ -22,6 +22,12 @@ Install [WeChatTweak-macOS](https://github.com/Sunnyyoung/WeChatTweak-macOS) fir
 - [ ] Fix bug
 - [ ] Upload to Raycast Store
 
+## How to Use
+
+before I create the final version and release it to Raycast Store,
+you can build it with your own
+`npm install && npm run dev`
+
 ## Known Issue
 
 When you open a contact conversation, the system will automatically open the browserhow to disable open in browser.
