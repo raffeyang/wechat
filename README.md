@@ -1,8 +1,8 @@
 # Wechat
 
-A RayCast extension for WeChat to quickly search your contacts and chat
+A Raycast extension for WeChat to quickly search your contacts and chat.
 
-![wechat](./assets/showcase.png)
+![WeChat](./assets/showcase.png)
 
 ## Requirement
 
@@ -16,21 +16,24 @@ Install [WeChatTweak-macOS](https://github.com/Sunnyyoung/WeChatTweak-macOS) fir
 
 - [x] Search Contact
 - [x] Open Contact
-- [x] List Wechat ID
-- [x] Copy Wechat ID
+- [x] List WeChat ID
+- [x] Copy WeChat ID
 - [x] Display Avatar
-- [ ] Fix bug
 - [ ] Upload to Raycast Store
+- [ ] Chat directly inside Rycast without opening WeChat
+- [ ] View WeChat History
+- [ ] Toggle WeChat Function
 
 ## How to Use
 
-before I create the final version and release it to Raycast Store,
-you can build it with your own
+before I create the final version and release it to the Raycast Store,
+you can use it with:
+
 `npm install && npm run dev`
 
 ## Known Issue
 
-When you open a contact conversation, the system will automatically open the browserhow to disable open in browser.
+When you open a contact conversation, the system will automatically open the browser windows, I don't know how to solve it by far.
 
 ## License
 
