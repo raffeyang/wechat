@@ -1,6 +1,7 @@
-import { ActionPanel, Action, List, showToast, Toast } from "@raycast/api";
+import { ActionPanel, Action, List, Icon, showToast, Toast } from "@raycast/api";
 import { useState, useEffect, useRef, useCallback } from "react";
 import fetch, { AbortError } from "node-fetch";
+import { URLSearchParams } from "url"
 
 export default function Command() {
   const { state, search } = useSearch();
@@ -9,7 +10,7 @@ export default function Command() {
     <List
       isLoading={state.isLoading}
       onSearchTextChange={search}
-      searchBarPlaceholder="Search Wechat Contact..."
+      searchBarPlaceholder="Search WeChat Contact..."
       throttle
     >
       <List.Section title="Contacts:" subtitle={state.items.length + ""}>
@@ -31,11 +32,12 @@ function SearchListItem({ searchResult }: { searchResult: SearchResult }) {
       actions={
         <ActionPanel>
           <ActionPanel.Section>
-            <Action.Open title="Chat" target={searchResult.url} application="Wechat" />
+            <Action.OpenInBrowser icon={Icon.Message} title="Chat" url={searchResult.url} />
           </ActionPanel.Section>
           <ActionPanel.Section>
             <Action.CopyToClipboard
-              title="Copy Wechat ID"
+              icon={Icon.Clipboard}
+              title="Copy WeChat ID"
               content={searchResult.arg}
               shortcut={{ modifiers: ["cmd"], key: "c" }}
             />
@@ -107,15 +109,15 @@ async function performSearch(searchText: string, signal: AbortSignal): Promise<S
 
   const json = (await response.json()) as
     | {
-        items: {
-          icon: { path: string };
-          title: string;
-          subtitle: string;
-          arg: string;
-          valid: number;
-          url: string;
-        }[];
-      }
+      items: {
+        icon: { path: string };
+        title: string;
+        subtitle: string;
+        arg: string;
+        valid: number;
+        url: string;
+      }[];
+    }
     | { code: string; message: string };
 
   if (!response.ok || "message" in json) {
