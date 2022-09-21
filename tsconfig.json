@@ -6,7 +6,7 @@
   ],
   "compilerOptions": {
     "lib": [
-      "es2021",
+      "es2022",
       "DOM"
     ],
     "module": "commonjs",

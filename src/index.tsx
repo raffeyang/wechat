@@ -2,6 +2,7 @@ import { ActionPanel, Action, List, Icon, showToast, Toast } from "@raycast/api"
 import { useState, useEffect, useRef, useCallback } from "react";
 import fetch, { AbortError } from "node-fetch";
 import { URLSearchParams } from "url"
+import { request } from 'urllib';
 
 export default function Command() {
   const { state, search } = useSearch();
@@ -23,6 +24,10 @@ export default function Command() {
 }
 
 function SearchListItem({ searchResult }: { searchResult: SearchResult }) {
+  async function start() {
+    const { data, res } = await request(searchResult.url);
+    console.log(searchResult.url);
+  }
   return (
     <List.Item
       title={searchResult.title}
@@ -32,7 +37,7 @@ function SearchListItem({ searchResult }: { searchResult: SearchResult }) {
       actions={
         <ActionPanel>
           <ActionPanel.Section>
-            <Action.OpenInBrowser icon={Icon.Message} title="Chat" url={searchResult.url} />
+            <Action icon={Icon.Message} title="Chat" onAction={start} />
           </ActionPanel.Section>
           <ActionPanel.Section>
             <Action.CopyToClipboard
