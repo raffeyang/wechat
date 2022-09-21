@@ -19,6 +19,8 @@ Install [WeChatTweak-macOS](https://github.com/Sunnyyoung/WeChatTweak-macOS) fir
 - [x] List WeChat ID
 - [x] Copy WeChat ID
 - [x] Display Avatar
+- [ ] Detect if Wechat is installed
+- [ ] optimized code 
 - [ ] Upload to Raycast Store
 - [ ] Chat directly inside Rycast without opening WeChat
 - [ ] View WeChat History
@@ -30,10 +32,6 @@ before I create the final version and release it to the Raycast Store,
 you can use it with:
 
 `npm install && npm run dev`
-
-## Known Issue
-
-When you open a contact conversation, the system will automatically open the browser windows, I don't know how to solve it by far.
 
 ## License
 
