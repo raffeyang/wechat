@@ -1,4 +1,4 @@
-# Wechat
+# WeChat
 
 A Raycast extension for WeChat to quickly search your contacts and chat.
 
