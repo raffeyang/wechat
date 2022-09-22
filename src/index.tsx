@@ -4,6 +4,8 @@ import fetch, { AbortError } from "node-fetch";
 import { URLSearchParams } from "url"
 import { request } from 'urllib';
 
+const [SEARCHURL, STARTURL] = ["http://localhost:48065/wechat/search", "http://localhost:48065/wechat/start"];
+
 export default function Command() {
   const { state, search } = useSearch();
 
@@ -24,9 +26,8 @@ export default function Command() {
 }
 
 function SearchListItem({ searchResult }: { searchResult: SearchResult }) {
-  async function start() {
-    const { data, res } = await request(searchResult.url);
-    console.log(searchResult.url);
+  async function startWeChat() {
+    await request(searchResult.url);
   }
   return (
     <List.Item
@@ -37,7 +38,7 @@ function SearchListItem({ searchResult }: { searchResult: SearchResult }) {
       actions={
         <ActionPanel>
           <ActionPanel.Section>
-            <Action icon={Icon.Message} title="Chat" onAction={start} />
+            <Action icon={Icon.Message} title="Chat" onAction={startWeChat} />
           </ActionPanel.Section>
           <ActionPanel.Section>
             <Action.CopyToClipboard
@@ -104,13 +105,15 @@ function useSearch() {
 
 async function performSearch(searchText: string, signal: AbortSignal): Promise<SearchResult[]> {
   const params = new URLSearchParams();
+
   params.append("keyword", searchText.length === 0 ? "@raycast/api" : searchText);
 
-  const response = await fetch("http://localhost:48065/wechat/search" + "?" + params.toString(), {
+  const response = await fetch(SEARCHURL + "?" + params.toString(), {
     method: "get",
     signal: signal,
   });
-  const start = "http://localhost:48065/wechat/start?session=";
+
+  const start = STARTURL + "?" + "session" + "=";
 
   const json = (await response.json()) as
     | {
