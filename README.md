@@ -2,11 +2,13 @@
 
 A Raycast extension for WeChat to quickly search your contacts and chat.
 
-![WeChat](./assets/showcase.png)
+![WeChat Showcase 1](./assets/showcase1.png)
+![WeChat Showcase 2](./assets/showcase2.png)
 
 ## Requirement
 
-Install [WeChatTweak-macOS](https://github.com/Sunnyyoung/WeChatTweak-macOS) first
+1. Install [WeChat for Mac](https://www.wechat.com) first
+2. Install [WeChatTweak-macOS](https://github.com/Sunnyyoung/WeChatTweak-macOS) :
 
 `brew install sunnyyoung/repo/wechattweak-cli`
 
