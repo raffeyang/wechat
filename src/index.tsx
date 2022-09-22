@@ -48,6 +48,9 @@ function SearchListItem({ searchResult }: { searchResult: SearchResult }) {
               shortcut={{ modifiers: ["cmd"], key: "c" }}
             />
           </ActionPanel.Section>
+          <ActionPanel.Section>
+            <Action.OpenInBrowser title="Feature Request" url="https://github.com/Jax0rz/wechat" shortcut={{ modifiers: ["cmd"], key: "h" }} />
+          </ActionPanel.Section>
         </ActionPanel>
       }
     />
