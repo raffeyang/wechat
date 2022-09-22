@@ -44,7 +44,7 @@ function SearchListItem({ searchResult }: { searchResult: SearchResult }) {
             <Action.CopyToClipboard
               icon={Icon.Clipboard}
               title="Copy WeChat ID"
-              content={searchResult.arg}
+              content={searchResult.title}
               shortcut={{ modifiers: ["cmd"], key: "c" }}
             />
           </ActionPanel.Section>
@@ -135,9 +135,9 @@ async function performSearch(searchText: string, signal: AbortSignal): Promise<S
   return json.items.map((result) => {
     return {
       icon: { path: result.icon.path },
-      title: result.title,
-      subtitle: result.subtitle,
-      arg: result.arg,
+      title: result.arg,
+      subtitle: result.title,
+      arg: result.subtitle,
       valid: result.valid,
       url: start + result.arg,
     };

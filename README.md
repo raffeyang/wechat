@@ -34,10 +34,6 @@ you can use it with:
 
 `npm install && npm run dev`
 
-## Warning
-
-Raycast doesn't support same key value ,if you have two contact with the same name, you may encounter the error reported.
-
 ## License
 
 MIT
