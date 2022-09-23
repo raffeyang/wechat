@@ -29,9 +29,10 @@ function SearchListItem({ searchResult }: { searchResult: SearchResult }) {
   async function startWeChat() {
     await request(searchResult.url);
   }
+  const title = searchResult.title || searchResult.subtitle || searchResult.arg;
   return (
     <List.Item
-      title={searchResult.title}
+      title={title}
       subtitle={searchResult.subtitle}
       accessoryTitle={searchResult.arg}
       icon={searchResult.icon.path}
@@ -44,7 +45,7 @@ function SearchListItem({ searchResult }: { searchResult: SearchResult }) {
             <Action.CopyToClipboard
               icon={Icon.Clipboard}
               title="Copy WeChat ID"
-              content={searchResult.title}
+              content={searchResult.arg}
               shortcut={{ modifiers: ["cmd"], key: "c" }}
             />
           </ActionPanel.Section>
@@ -138,9 +139,9 @@ async function performSearch(searchText: string, signal: AbortSignal): Promise<S
   return json.items.map((result) => {
     return {
       icon: { path: result.icon.path },
-      title: result.arg,
-      subtitle: result.title,
-      arg: result.subtitle,
+      title: result.title,
+      subtitle: result.subtitle,
+      arg: result.arg,
       valid: result.valid,
       url: start + result.arg,
     };
