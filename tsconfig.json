@@ -1,16 +1,11 @@
 {
   "$schema": "https://json.schemastore.org/tsconfig",
   "display": "Node 16",
-  "include": [
-    "src/**/*"
-  ],
+  "include": ["src/**/*"],
   "compilerOptions": {
-    "lib": [
-      "es2022",
-      "DOM"
-    ],
+    "lib": ["es2022", "DOM"],
     "module": "commonjs",
-    "target": "es2021",
+    "target": "es2022",
     "strict": true,
     "isolatedModules": true,
     "esModuleInterop": true,
@@ -18,5 +13,8 @@
     "forceConsistentCasingInFileNames": true,
     "jsx": "react-jsx",
     "resolveJsonModule": true
+  },
+  "rules": {
+    "semicolon": false
   }
 }
