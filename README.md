@@ -21,6 +21,7 @@ A Raycast extension for WeChat to quickly search your contacts and chat.
 - [x] List WeChat ID
 - [x] Copy WeChat ID
 - [x] Display Avatar
+- [ ] Fix some bug
 - [ ] Upload to Raycast Store
 - [ ] Automatic Run WeChat
 - [ ] Detect if Wechat is installed
