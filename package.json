@@ -5,7 +5,6 @@
   "description": "A RayCast extension for WeChat to quickly search your contacts and chat",
   "icon": "wechat.png",
   "author": "raffeyang",
-  "owner": "raffeyang",
   "categories": [
     "Communication"
   ],
