@@ -1,8 +1,7 @@
-import { ActionPanel, Action, List, Icon, showToast, Toast } from "@raycast/api"
+import { ActionPanel, Action, List, Icon, showToast, Toast,closeMainWindow  } from "@raycast/api"
 import { useState, useEffect, useRef, useCallback } from "react"
 import fetch, { AbortError } from "node-fetch"
 import { URLSearchParams } from "url"
-import { request } from "urllib"
 
 const [SEARCHURL, STARTURL] = [
   "http://localhost:48065/wechat/search",
@@ -33,7 +32,8 @@ export default function Command() {
 
 function SearchListItem({ searchResult }: { searchResult: SearchResult }) {
   async function startWeChat() {
-    await request(searchResult.url)
+    await fetch(searchResult.url)
+    await closeMainWindow({ clearRootSearch: true });
   }
   const title = searchResult.title || searchResult.subtitle || searchResult.arg
   return (
