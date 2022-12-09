@@ -7,16 +7,13 @@ A Raycast extension for WeChat to quickly search your contacts and chat.
 
 ## Requirement
 
-1. Install [WeChat for Mac](https://www.wechat.com) first
-2. Install [WeChatTweak-macOS](https://github.com/Sunnyyoung/WeChatTweak-macOS) :
-
-`brew install sunnyyoung/repo/wechattweak-cli`
-
-`sudo wechattweak-cli install`
+1. Install [WeChat for Mac](https://www.wechat.com) 
+2. Install [WeChatTweak-macOS](https://github.com/Sunnyyoung/WeChatTweak-macOS) 
 
 ## Todo
 
 - [x] Search Contact
+- [x] List Search Contact Numbers
 - [x] Open Contact
 - [x] List WeChat ID
 - [x] Copy WeChat ID
