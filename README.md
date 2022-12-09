@@ -34,4 +34,4 @@ you can use it with:
 
 ## License
 
-MIT
+[MIT](LICENSE)
