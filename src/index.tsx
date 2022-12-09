@@ -1,4 +1,12 @@
-import { ActionPanel, Action, List, Icon, showToast, Toast,closeMainWindow  } from "@raycast/api"
+import {
+  ActionPanel,
+  Action,
+  List,
+  Icon,
+  showToast,
+  Toast,
+  closeMainWindow
+} from "@raycast/api"
 import { useState, useEffect, useRef, useCallback } from "react"
 import fetch, { AbortError } from "node-fetch"
 import { URLSearchParams } from "url"
@@ -14,28 +22,30 @@ const [SEARCHURL, STARTURL] = [
 ]
 
 export default function Command() {
-  
-  async function isWeChatRunningCheck(){
-    if (!isWeChatRunning()){
-    await isWeChatRunning() 
-  }}
+  async function isWeChatRunningCheck() {
+    if (!isWeChatRunning()) {
+      await isWeChatRunning()
+    }
+  }
   isWeChatRunningCheck()
 
-  async function isWeChatInstalledCheck(){
+  async function isWeChatInstalledCheck() {
     if (!isWeChatInstalled()) {
-  await isWeChatInstalledAlertDialog()
-  return;
-  }}
+      await isWeChatInstalledAlertDialog()
+      return
+    }
+  }
   isWeChatInstalledCheck()
 
-  async function isWeChatTweakInstalledCheck(){
+  async function isWeChatTweakInstalledCheck() {
     if (!isWeChatTweakInstalled()) {
-  await isWeChatTweakInstalledAlertDialog()
-  return;
-  }}
+      await isWeChatTweakInstalledAlertDialog()
+      return
+    }
+  }
   isWeChatTweakInstalledCheck()
 
-const { state, search } = useSearch()
+  const { state, search } = useSearch()
   return (
     <List
       isLoading={state.isLoading}
@@ -58,7 +68,7 @@ const { state, search } = useSearch()
 function SearchListItem({ searchResult }: { searchResult: SearchResult }) {
   async function startWeChat() {
     await fetch(searchResult.url)
-    await closeMainWindow({ clearRootSearch: true });
+    await closeMainWindow({ clearRootSearch: true })
   }
   const title = searchResult.title || searchResult.subtitle || searchResult.arg
   return (

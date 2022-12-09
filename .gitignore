@@ -1,4 +1,5 @@
-# ---- macOS ----
+### macOS ###
+
 # General
 .DS_Store
 .AppleDouble
@@ -27,7 +28,8 @@ Network Trash Folder
 Temporary Items
 .apdisk
 
-# ---- Node ----
+### Node ###
+
 # Logs
 logs
 *.log

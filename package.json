@@ -2,7 +2,7 @@
   "$schema": "https://www.raycast.com/schemas/extension.json",
   "name": "wechat",
   "title": "WeChat",
-  "description": "A RayCast extension for WeChat to quickly search your contacts and chat",
+  "description": "A Raycast extension for WeChat to quickly search your contacts and chat",
   "icon": "wechat.png",
   "author": "raffeyang",
   "categories": [
@@ -14,7 +14,7 @@
       "name": "index",
       "title": "WeChat",
       "subtitle": "Search your WeChat contacts and chat",
-      "description": "A RayCast extension for WeChat  to quickly search your contacts and chat",
+      "description": "A Raycast extension for WeChat  to quickly search your contacts and chat",
       "mode": "view"
     }
   ],
