@@ -1,11 +1,11 @@
 {
   "$schema": "https://www.raycast.com/schemas/extension.json",
   "name": "wechat",
-  "title": "Wechat",
-  "description": "A RayCast extension for WeChat  to quickly search your contacts and chat",
+  "title": "WeChat",
+  "description": "A RayCast extension for WeChat to quickly search your contacts and chat",
   "icon": "wechat.png",
-  "author": "Jax0rz",
-  "owner": "jax0rz",
+  "author": "raffeyang",
+  "owner": "raffeyang",
   "categories": [
     "Communication"
   ],
@@ -13,8 +13,8 @@
   "commands": [
     {
       "name": "index",
-      "title": "Wechat",
-      "subtitle": "Search your contacts and chat",
+      "title": "WeChat",
+      "subtitle": "Search your WeChat contacts and chat",
       "description": "A RayCast extension for WeChat  to quickly search your contacts and chat",
       "mode": "view"
     }
@@ -22,7 +22,8 @@
   "dependencies": {
     "@raycast/api": "^1.39.3",
     "@raycast/utils": "^1.4.1",
-    "node-fetch": "^3.0.0"
+    "node-fetch": "^3.0.0",
+    "open": "^8.4.0"
   },
   "devDependencies": {
     "@typescript-eslint/eslint-plugin": "^5.0.0",
