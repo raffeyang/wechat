@@ -1,12 +1,4 @@
-import {
-  ActionPanel,
-  Action,
-  List,
-  Icon,
-  showToast,
-  Toast,
-  closeMainWindow
-} from "@raycast/api"
+import { ActionPanel, Action, List, Icon, closeMainWindow } from "@raycast/api"
 import { useState, useEffect, useRef, useCallback } from "react"
 import fetch, { AbortError } from "node-fetch"
 import { URLSearchParams } from "url"
@@ -22,13 +14,6 @@ const [SEARCHURL, STARTURL] = [
 ]
 
 export default function Command() {
-  async function isWeChatRunningCheck() {
-    if (!isWeChatRunning()) {
-      await isWeChatRunning()
-    }
-  }
-  isWeChatRunningCheck()
-
   async function isWeChatInstalledCheck() {
     if (!isWeChatInstalled()) {
       await isWeChatInstalledAlertDialog()
@@ -134,13 +119,7 @@ function useSearch() {
         if (error instanceof AbortError) {
           return
         }
-
-        console.error("search error", error)
-        showToast({
-          style: Toast.Style.Failure,
-          title: "Could not perform search",
-          message: String(error)
-        })
+        isWeChatRunning()
       }
     },
     [cancelRef, setState]
