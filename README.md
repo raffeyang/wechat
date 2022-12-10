@@ -2,9 +2,9 @@
 
 A Raycast extension for WeChat to quickly search your contacts and chat.
 
-![WeChat](./assets/cover.png)
-![WeChat Showcase 1](./assets/showcase1.png)
-![WeChat Showcase 2](./assets/showcase2.png)
+![WeChat](./metadata/cover.png)
+![WeChat Showcase 1](./metadata/showcase1.png)
+![WeChat Showcase 2](./metadata/showcase2.png)
 
 ## Requirement
 
@@ -35,4 +35,4 @@ you can use it with:
 
 ## License
 
-MIT
+[MIT](LICENSE)
