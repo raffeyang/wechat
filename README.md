@@ -3,8 +3,7 @@
 A Raycast extension for WeChat to quickly search your contacts and chat.
 
 ![WeChat](./metadata/cover.png)
-![WeChat Showcase 1](./metadata/showcase1.png)
-![WeChat Showcase 2](./metadata/showcase2.png)
+![WeChat Showcase](./metadata/showcase.png)
 
 ## Requirement
 
