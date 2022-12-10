@@ -5,6 +5,8 @@ A Raycast extension for WeChat to quickly search your contacts and chat.
 ![WeChat](./metadata/cover.png)
 ![WeChat Showcase](./metadata/showcase.png)
 
+https://user-images.githubusercontent.com/7557357/206844100-001fd7b5-6de5-4042-9adc-647152062091.mp4
+
 ## Requirement
 
 1. Install [WeChat for Mac](https://www.wechat.com) 
