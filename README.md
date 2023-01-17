@@ -27,12 +27,9 @@ https://user-images.githubusercontent.com/7557357/206844100-001fd7b5-6de5-4042-9
 - [ ] View WeChat History
 - [ ] Toggle WeChat Function
 
-## How to Use
+## Install
 
-before I create the final version and release it to the Raycast Store,
-you can use it with:
-
-`npm install && npm run dev`
+<a href="https://www.raycast.com/raffeyang/wechat"><img src="https://www.raycast.com/raffeyang/wechat/install_button@2x.png" height="64" style="height: 64px;" alt=""></a>
 
 ## License
 
