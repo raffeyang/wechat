@@ -2,10 +2,8 @@
 
 A [Raycast](https://www.raycast.com) extension for WeChat to quickly search your contacts and chat.
 
-![WeChat](./metadata/cover.png)
+![WeChat](./assets/cover.png)
 ![WeChat Showcase](./metadata/showcase.png)
-
-https://user-images.githubusercontent.com/7557357/206844100-001fd7b5-6de5-4042-9adc-647152062091.mp4
 
 ## Requirement
 
@@ -23,14 +21,21 @@ https://user-images.githubusercontent.com/7557357/206844100-001fd7b5-6de5-4042-9
 - [x] Fix some bug
 - [x] Upload to Raycast Store
 - [x] Detect if Wechat is installed
+- [ ] Support fuzzy query
 - [ ] Chat directly inside Rycast without opening WeChat
 - [ ] View WeChat History
 - [ ] Toggle WeChat Function
 
-## Install
+## How to Use
+
+- Raycast Store
 <p align="center">
 <a href="https://www.raycast.com/raffeyang/wechat"><img src="https://www.raycast.com/raffeyang/wechat/install_button@2x.png" height="64" style="height: 64px;" alt=""></a>
 </p>
+
+- Manual Install
+
+`npm install && npx ray develop`
 
 ## License
 
